@@ -21,7 +21,7 @@ export const callApi = (url, options = {}, headers = {}) => {
       if(res.status === 401) {
         logoutUnauthorized()
       }
-      return res;
+      return res.json();
     })
     .catch(error => {
       console.log(error)
